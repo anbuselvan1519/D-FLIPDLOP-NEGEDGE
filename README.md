@@ -1,5 +1,8 @@
 # D-FLIPDLOP-NEGEDGE
 
+## Name: Anbuselvan S
+## Reg no: 212223240008
+
 **AIM:**
 
 To implement  D flipflop using verilog and validating their functionality using their functional tables
@@ -28,17 +31,53 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Define Module: Define a Verilog module for the D flip-flop with inputs (D, CLK) and outputs (Q, Q_bar).
+
+2.Declare Inputs and Outputs: Declare input and output ports for the module.
+
+3.Implement Flip-Flop Logic: Write Verilog code to implement the D flip-flop logic based on its functional table. Use a synchronous always @(posedge CLK) block to trigger the flip-flop on the positive edge of the clock signal.
+
+4.Simulate Using Testbench: Write a Verilog testbench to simulate the behavior of the D flip-flop under different input conditions.
+
+5.Apply Input Stimuli: In the testbench, apply various combinations of input stimuli (D, CLK) to cover all possible input states.
+
+6.Verify Output Behavior: Verify that the output behavior of the D flip-flop matches the expected behavior defined by its functional table.
+
+7.Check for Race Conditions: Ensure that there are no race conditions or undefined states in the design by analyzing the timing and sequence of input changes.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+Program for flipflops and verify its truth table in quartus using Verilog programming.
+
+Developed by: Anbuselvan S
+
+RegisterNumber:212223240008
+```
+module EXP_8(D,Clock,reset,Q,Qbar);
+input D,Clock,reset;
+output reg Q,Qbar;
+always @(negedge Clock)
+if(!reset)
+	Q<=0;
+else
+	Q<=D;
+endmodule
+```
+
 
 **RTL LOGIC FOR FLIPFLOPS**
 
 
+
+![326327098-62373e4d-0689-4b80-842e-165057294500](https://github.com/user-attachments/assets/4c174b4f-2d3b-48ba-8f95-0d35188522df)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
 
+
+![326327117-4b72f1cc-faa4-4acf-88c3-8cc9ba3361fa](https://github.com/user-attachments/assets/40a45ba8-6dda-49f6-a437-e0fd3a37b790)
+
+
 **RESULTS**
+
+Thus the program to implement a D flipflop using verilog and validating their functionality using their functional tables.
